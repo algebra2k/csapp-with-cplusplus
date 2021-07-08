@@ -28,11 +28,11 @@ int saturating_add(int x, int y) {
 }
 
 void test_saturating_add() {
-    assert(saturating_add(std::numeric_limits<int>::max(), 1) == std::numeric_limits<int>::max());
-    assert(saturating_add(std::numeric_limits<int>::min(), -1) == std::numeric_limits<int>::min());
-    assert(saturating_add(10, 20) == 30);
+  assert(saturating_add(std::numeric_limits<int>::max(), 1) ==
+         std::numeric_limits<int>::max());
+  assert(saturating_add(std::numeric_limits<int>::min(), -1) ==
+         std::numeric_limits<int>::min());
+  assert(saturating_add(10, 20) == 30);
 }
 
-int main() {
-    test_saturating_add();
-}
+int main() { test_saturating_add(); }
