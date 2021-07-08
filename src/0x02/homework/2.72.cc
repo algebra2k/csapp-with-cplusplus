@@ -22,8 +22,8 @@ void test_copy_int() {
   copy_int(val, short_buf, sizeof(short));
   assert(*reinterpret_cast<int*>(short_buf) != val);
 
-  char zero_buf[sizeof(short)];
-  copy_int(val, zero_buf, sizeof(short));
+  char zero_buf[0];
+  copy_int(val, zero_buf, 0);
   assert(*reinterpret_cast<int*>(zero_buf) != val);
 }
 
